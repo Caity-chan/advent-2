@@ -1,29 +1,30 @@
+
 const fs = require('fs');
 const passfile = fs.readFileSync('./passwords.txt');
 const passarray = passfile.toString().split("\n");
 index = 0;
 indexb = 0;
-async function test() {
+async function testb() {
     for (const passwordarray of passarray) {
+        count = 0;
         placeholder = await passwordarray.split(" ");
         reqchar = placeholder[1].replace(/:/g, "");
         policy = placeholder[0].split("-");
         pass = placeholder[2].split("");
         indexa = 0;
-        for (const char of pass) {
-            if (char === reqchar) {
-                indexa += 1;
-            }
+        polica = parseInt(policy[0]);
+        policb = parseInt(policy[1]);
+        if (pass[polica-1] === reqchar) {
+            count += 1;
         }
-        if (indexa >= parseInt(policy[0])) {
-            if (indexa <= parseInt(policy[1])) {
-                indexb += 1;
-            }
+        if (pass[policb-1] === reqchar) {
+            count += 1;
+        }
+        if (count === 1) {
+            indexb += 1;
         }
         index += 1;
     }
-    console.log("Part a:" + indexb);
+    console.log("Part b:" + indexb);
 }
-test();
-
-const testb = require('./partb');
+testb();
