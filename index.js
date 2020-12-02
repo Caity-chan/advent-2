@@ -1,7 +1,6 @@
 const fs = require('fs');
 const passfile = fs.readFileSync('./passwords.txt');
 const passarray = passfile.toString().split("\n");
-index = 0;
 indexb = 0;
 async function test() {
     for (const passwordarray of passarray) {
@@ -20,7 +19,6 @@ async function test() {
                 indexb += 1;
             }
         }
-        index += 1;
     }
     console.log("Part a:" + indexb);
 }
