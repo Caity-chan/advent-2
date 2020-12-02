@@ -1,6 +1,5 @@
-
 const fs = require('fs');
-const passfile = fs.readFileSync('./passwords.txt');
+const passfile = fs.readFileSync('./day-2/passwords.txt');
 const passarray = passfile.toString().split("\n");
 indexb = 0;
 async function testb() {
@@ -23,6 +22,6 @@ async function testb() {
             indexb += 1;
         }
     }
-    console.log("Part b:" + indexb);
+    console.log("Day 2, part b:" + indexb);
 }
 testb();
