@@ -18,9 +18,3 @@ for (const chunk of landarray) {
     index += 1;
 }
 console.log("Day 3, part a: " + trees);
-
-//3
-//6 2
-//9 3
-//12 4
-//15 5
