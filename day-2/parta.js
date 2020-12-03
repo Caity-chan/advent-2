@@ -20,6 +20,6 @@ async function test() {
             }
         }
     }
-    console.log("Day 2, part a:" + indexab);
+    console.log("Day 2, part a: " + indexab);
 }
 test();

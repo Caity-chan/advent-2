@@ -22,6 +22,6 @@ async function testb() {
             indexb += 1;
         }
     }
-    console.log("Day 2, part b:" + indexb);
+    console.log("Day 2, part b: " + indexb);
 }
 testb();

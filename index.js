@@ -1,5 +1,5 @@
 const fs = require('fs');
-days = 2;
+days = 3;
 i = 0;
 while (i < days) {
     i += 1;
